@@ -1,4 +1,7 @@
+import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wallpaperhub/views/SplashScreen.dart';
 import 'package:wallpaperhub/views/home.dart';
 
 void main() {
@@ -15,7 +18,10 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Home(),
+      home: SplashScreen(),
     );
   }
 }
+
+
+

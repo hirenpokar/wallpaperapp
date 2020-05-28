@@ -23,7 +23,6 @@ class _CategoryState extends State<Category> {
     var response = await http.get("https://api.pexels.com/v1/search?query=$query&per_page=15",
         headers: {
           "Authorization" : apikey});
-
 //    print(response.body.toString());
 
     Map<String, dynamic> jsonData = jsonDecode(response.body);
@@ -53,9 +52,11 @@ class _CategoryState extends State<Category> {
         child: Container(
           child: Column(
             children: <Widget>[
-              SizedBox(
+          SizedBox(
+//              SizedBox(height: 16,),
                 height: 16,
               ),
+              wallpapersList(wallpapers: wallpapers, context: context)
             ],
           ),
         ),

@@ -5,6 +5,7 @@ import 'package:wallpaperhub/data/data.dart';
 import 'package:wallpaperhub/model/categories_model.dart';
 import 'package:wallpaperhub/model/wallpaper_model.dart';
 import 'package:wallpaperhub/views/category.dart';
+import 'package:wallpaperhub/views/image_view.dart';
 import 'package:wallpaperhub/views/search.dart';
 import 'package:wallpaperhub/widget/widget.dart';
 import 'package:http/http.dart' as http;
@@ -132,14 +133,6 @@ class CategoriesTile extends StatelessWidget {
           )
         ));
       },
-      child: GestureDetector(
-        onTap: (){
-          Navigator.push(context, MaterialPageRoute(
-            builder: (context) => Category(
-              categoryName: title.toLowerCase(),
-            )
-          ));
-        },
         child: Container(
           margin: EdgeInsets.only(right: 4),
           child: Stack(children: <Widget>[
@@ -156,7 +149,6 @@ class CategoriesTile extends StatelessWidget {
               child: Text(title, style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 15),),),
           ],),
         ),
-      ),
     );
   }
 }
